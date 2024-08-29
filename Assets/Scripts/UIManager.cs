@@ -10,11 +10,13 @@ public class UIManager : MonoBehaviour
     {
         get
         {
+            //get은 외부에서 불리면 생성됨
             if (m_instance == null)
             {
                 m_instance = FindObjectOfType<UIManager>();
+                //이게 실행되려면 UIManager를 가지고 있는 게임오브젝트가 하이어라키 창에 있어야 함
+                //없으면 찾을 수 없어서 계속 null로 남아있게 됨
             }
-
             return m_instance;
         }
     }
@@ -54,5 +56,6 @@ public class UIManager : MonoBehaviour
     public void GameRestart() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.GetActiveScene().name : 현재 씬의 이름을 가져오는 것!
     }
 }

@@ -183,7 +183,7 @@ public class Gun : MonoBehaviour
         }
 
         // 탄창을 채움
-        magAmmo += ammoRemain;
+        magAmmo += ammoToFill;
         // 남은 탄알에서 탄창에 채운 만큼 탄알을 뺌
         ammoRemain -= ammoToFill;
 

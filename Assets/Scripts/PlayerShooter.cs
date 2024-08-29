@@ -52,6 +52,7 @@ public class PlayerShooter : MonoBehaviour
         }
         // 남은 탄알 UI 갱신
         UpdateUI();
+        //매 프레임마다 UpdateUI()를 불러냄
     }
 
     // 탄약 UI 갱신
@@ -61,6 +62,7 @@ public class PlayerShooter : MonoBehaviour
         {
             // UI 매니저의 탄약 텍스트에 탄창의 탄약과 남은 전체 탄약을 표시
             UIManager.instance.UpdateAmmoText(gun.magAmmo, gun.ammoRemain);
+            //UIManager를 가지고 있는 게임오브젝트가 하이어라키 창에 없으면 계속 null로 남아서 실행되지 않음
         }
     }
 
